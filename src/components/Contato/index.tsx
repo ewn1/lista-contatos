@@ -16,8 +16,8 @@ const ContatoCard = ({ nomeCompleto, email, telefone }: Props) => {
         <li> {telefone}</li>
       </ul>
       <div>
-        <button>Editar</button>
-        <button>Excluir</button>
+        <S.BotaoEditar>Editar</S.BotaoEditar>
+        <S.BotaoExcluir>Excluir</S.BotaoExcluir>
       </div>
     </S.Card>
   )

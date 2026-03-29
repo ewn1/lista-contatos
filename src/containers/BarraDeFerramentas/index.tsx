@@ -1,14 +1,15 @@
 import * as S from '../../styles'
-import { BotaoAdicionar, BotaoBuscar } from './styles'
+import { BotaoAdicionar, BotaoBuscar, CampoBusca, Titulo } from './styles'
 
 const BarraDeFerramentas = () => {
   return (
     <S.Header>
       <div>
-        <input type="text" placeholder="Buscar Contato" />
+        <Titulo>Lista de Contatos</Titulo>
+        <CampoBusca type="text" placeholder="Buscar Contato" />
         <BotaoBuscar>Buscar</BotaoBuscar>
+        <BotaoAdicionar>Novo Contato</BotaoAdicionar>
       </div>
-      <BotaoAdicionar>Novo Contato</BotaoAdicionar>
     </S.Header>
   )
 }

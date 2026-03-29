@@ -24,7 +24,7 @@ export const MainContainer = styled.div`
   max-width: 1024px;
   width: 100%;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 75px 0;
 `
 
 export const HeaderContainer = styled.div`
