@@ -51,4 +51,20 @@ export const Header = styled.header`
   border-radius: 8px;
 `
 
+export const BotaoAdicionar = styled.button`
+  font-family: 'Roboto Mono', monospace;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #22ca5d;
+  }
+`
+
 export default GlobalStyle

@@ -46,6 +46,11 @@ export const BotaoEditar = styled.button`
   cursor: pointer;
   border-radius: 8px;
   border: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ff435c;
+  }
 `
 
 export const BotaoExcluir = styled.button`
@@ -57,4 +62,9 @@ export const BotaoExcluir = styled.button`
   cursor: pointer;
   border-radius: 8px;
   border: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #9166ee;
+  }
 `

@@ -14,15 +14,5 @@ export const CampoBusca = styled.input`
   border-radius: 8px;
   border: 1px solid #ccc;
   width: 213px;
-`
-
-export const BotaoAdicionar = styled.button`
-  font-family: 'Roboto Mono', monospace;
-  background-color: #4caf50;
-  color: #fff;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 8px;
-  border: none;
-  margin-left: 8px;
+  margin-right: 16px;
 `
