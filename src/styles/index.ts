@@ -67,4 +67,37 @@ export const BotaoAdicionar = styled.button`
   }
 `
 
+export const BotãoConfirmar = styled.button`
+  font-family: 'Roboto Mono', monospace;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 12px;
+  margin-right: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #22ca5d;
+  }
+`
+
+export const BotaoCancelar = styled.button`
+  font-family: 'Roboto Mono', monospace;
+  background-color: #ff6e6c;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ff435c;
+  }
+`
+
 export default GlobalStyle

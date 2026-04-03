@@ -68,3 +68,50 @@ export const BotaoExcluir = styled.button`
     background-color: #9166ee;
   }
 `
+
+export const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+`
+
+export const ModalContainer = styled.div`
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+
+  h3 {
+    margin-bottom: 16px;
+    font-family: 'Gelasio', serif;
+  }
+
+  p {
+    margin-bottom: 24px;
+    color: #666;
+  }
+`
+
+export const nomeDoContato = styled.p`
+  font-family: 'Gelasio', serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+`
+
+export const CampoEdit = styled.input`
+  font-family: 'Roboto Mono', monospace;
+  padding: 4px 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+`
