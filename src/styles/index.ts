@@ -25,6 +25,10 @@ export const MainContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 75px 0;
+
+  @media (max-width: 767px) {
+    padding-top: 105px;
+  }
 `
 
 export const HeaderContainer = styled.div`
@@ -49,6 +53,28 @@ export const Header = styled.header`
   max-width: 1024px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    margin: 8px;
+    padding: 16px;
+
+    input {
+      width: 100%;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    button,
+    a {
+      width: 100%;
+      display: block;
+      text-align: center;
+      padding: 12px 0;
+    }
+  }
 `
 
 export const BotaoAdicionar = styled.button`

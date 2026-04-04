@@ -5,39 +5,37 @@ type ContatosState = {
   itens: Contato[]
 }
 
+const contatosExemplo: Contato[] = [
+  {
+    nomeCompleto: 'Gandalf',
+    email: 'mithrandir.thegrey@gmail.com',
+    telefone: '99988776655',
+    id: 1,
+  },
+  {
+    nomeCompleto: 'Tom Bombadil',
+    email: 'bombadil.tom@yahoo.com',
+    telefone: '100000001',
+    id: 2,
+  },
+  {
+    nomeCompleto: 'Legolas leaf green',
+    email: 'leafgreen.legolas@gmail.com',
+    telefone: '44998877665',
+    id: 3,
+  },
+]
+
+const carregarContatosSalvos = (): Contato[] => {
+  const contatosSalvos = localStorage.getItem('contatos')
+  if (contatosSalvos) {
+    return JSON.parse(contatosSalvos)
+  }
+  return contatosExemplo
+}
+
 const initialState: ContatosState = {
-  itens: [
-    {
-      nomeCompleto: 'Gandalf',
-      email: 'mithrandir.thegrey@gmail.com',
-      telefone: '99988776655',
-      id: 1,
-    },
-    {
-      nomeCompleto: 'Tom Bombadil',
-      email: 'bombadil.tom@yahoo.com',
-      telefone: '100000001',
-      id: 2,
-    },
-    {
-      nomeCompleto: 'Witch King of Dol Guldur',
-      email: 'thewitchking@gmail.com',
-      telefone: '55911223344',
-      id: 3,
-    },
-    {
-      nomeCompleto: 'Aragorn',
-      email: 'thetrueking@gmail.com',
-      telefone: '55999887766',
-      id: 4,
-    },
-    {
-      nomeCompleto: 'Legolas leaf green',
-      email: 'leafgreen.legolas@gmail.com',
-      telefone: '44998877665',
-      id: 5,
-    },
-  ],
+  itens: carregarContatosSalvos(),
 }
 
 const contatosSlice = createSlice({
@@ -48,6 +46,7 @@ const contatosSlice = createSlice({
       state.itens = state.itens.filter(
         (contato) => contato.id !== action.payload,
       )
+      localStorage.setItem('contatos', JSON.stringify(state.itens))
     },
     adicionar: (state, action: PayloadAction<Omit<Contato, 'id'>>) => {
       const contatoExistente = state.itens.find(
@@ -66,6 +65,7 @@ const contatosSlice = createSlice({
           id: ultimoContato ? ultimoContato.id + 1 : 1,
         }
         state.itens.push(novoContato)
+        localStorage.setItem('contatos', JSON.stringify(state.itens))
       }
     },
     editar: (state, action: PayloadAction<Contato>) => {
@@ -74,6 +74,7 @@ const contatosSlice = createSlice({
       )
       if (indexContato >= 0) {
         state.itens[indexContato] = action.payload
+        localStorage.setItem('contatos', JSON.stringify(state.itens))
       }
     },
   },

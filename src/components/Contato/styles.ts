@@ -35,6 +35,10 @@ export const Card = styled.div`
     display: flex;
     gap: 8px;
   }
+
+  @media (max-width: 767px) {
+    margin: 16px 8px;
+  }
 `
 
 export const BotaoEditar = styled.button`

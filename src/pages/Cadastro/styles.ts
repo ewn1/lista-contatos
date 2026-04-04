@@ -17,6 +17,11 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (max-width: 767px) {
+    width: 90%;
+    padding: 0px 16px;
+  }
 `
 
 export const Campo = styled.input`

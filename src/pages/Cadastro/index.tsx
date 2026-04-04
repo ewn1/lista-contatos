@@ -31,18 +31,21 @@ const FormCadastro = () => {
       <S.Titulo>Cadastro de Contato</S.Titulo>
       <S.Form onSubmit={cadastrarContato}>
         <S.Campo
+          required
           type="text"
           placeholder="Nome"
           value={nomeCompleto}
           onChange={(e) => setNomeCompleto(e.target.value)}
         />
         <S.Campo
+          required
           type="tel"
           placeholder="Telefone"
           value={telefone}
           onChange={(e) => setTelefone(e.target.value)}
         />
         <S.Campo
+          required
           type="email"
           placeholder="Email"
           value={email}

@@ -6,6 +6,10 @@ export const Titulo = styled.h1`
   font-weight: bold;
   color: #333;
   margin-bottom: 8px;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
 `
 
 export const CampoBusca = styled.input`
